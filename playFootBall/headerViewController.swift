@@ -16,6 +16,8 @@ class headerViewController: UIViewController {
     @IBOutlet weak var rightHeaderView: UIView!
     @IBOutlet weak var rightViewMargin: NSLayoutConstraint!
     @IBOutlet weak var leftViewMargin: NSLayoutConstraint!
+    var myConstant = Int()
+    var flag = false
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
@@ -26,13 +28,26 @@ class headerViewController: UIViewController {
     //self.perform(#selector(headerViewController.converUIViewToCircle), with: nil, afterDelay: 1)
     
     @IBAction func centerButtonTAPPED(_ sender: AnyObject) {
-        
-        let  myConstant = -60;
-        self.rightViewMargin.constant = CGFloat(myConstant);
+        rightHeaderView.isHidden = false
+        if flag {
+              myConstant = +60
+            flag = false
+            
+        } else {
+              myConstant = -60
+            flag = true
+            
+        }
         self.leftViewMargin.constant = CGFloat(myConstant);
+        self.rightViewMargin.constant = CGFloat(myConstant);
+        
         UIView.animate(withDuration: 0.4, animations: {
             self.view.layoutIfNeeded()
-            }, completion: {finished in })
+            }, completion: {finished in
+                if self.flag {
+                self.rightHeaderView.isHidden = true
+                }})
+       
     }
     
     func converUIViewToCircle() {

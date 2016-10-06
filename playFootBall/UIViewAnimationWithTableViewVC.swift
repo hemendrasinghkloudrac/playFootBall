@@ -8,24 +8,36 @@
 
 import UIKit
 
-class UIViewAnimationWithTableViewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class UIViewAnimationWithTableViewVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
+    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
-
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "uiViewAnimationCellIdentifier", for: indexPath) as! UIViewAnimationTableCell
+        cell.centerBtn.addTarget(self, action:#selector(UIViewAnimationWithTableViewVC.cellBtnAction), for: .touchUpInside)
         return cell
+    }
+    
+    func cellBtnAction(_ sender: UIButton) {
+        let cell = sender.superview?.superview?.superview?.superview as! UIViewAnimationTableCell
+        let  myConstant = -60;
+        cell.rightViewMargin.constant = CGFloat(myConstant);
+        cell.leftViewMargin.constant = CGFloat(myConstant);
+        UIView.animate(withDuration: 0.4, animations: {
+            cell.layoutIfNeeded()
+            }, completion: {finished in })
     }
 }

@@ -9,27 +9,19 @@
 import UIKit
 
 class UIViewAnimationTableCell: UITableViewCell {
-
+    
     @IBOutlet weak var leftUIView: UIView!
     @IBOutlet weak var centerUIView: UIView!
     @IBOutlet weak var rightUIView: UIView!
     @IBOutlet weak var leftViewMargin: NSLayoutConstraint!
     @IBOutlet weak var rightViewMargin: NSLayoutConstraint!
+    @IBOutlet weak var centerBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.main.async {
             self.convertPlainUIViewToCircle()
         }
-     }
-    
-    @IBAction func buttonTapped(_ sender: AnyObject) {
-        let  myConstant = -60;
-        self.rightViewMargin.constant = CGFloat(myConstant);
-        self.leftViewMargin.constant = CGFloat(myConstant);
-        UIView.animate(withDuration: 0.4, animations: {
-            self.layoutIfNeeded()
-            }, completion: {finished in })
     }
     
     func convertPlainUIViewToCircle() {
@@ -40,4 +32,4 @@ class UIViewAnimationTableCell: UITableViewCell {
         rightUIView.layer.cornerRadius = rightUIView.frame.size.width/2.0
         rightUIView.clipsToBounds = true
     }
- }
+}

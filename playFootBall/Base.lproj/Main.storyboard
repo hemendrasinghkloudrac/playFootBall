@@ -420,7 +420,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RV2-cf-WSl" id="1iV-aY-2Mm">
-                                            <frame key="frameInset" width="320" height="129"/>
+                                            <frame key="frameInset" width="320" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWW-FH-QK2">
@@ -436,7 +436,6 @@
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWf-2p-q8Q">
                                                                     <state key="normal" title="Button"/>
                                                                     <connections>
-                                                                        <action selector="buttonTapped:" destination="RV2-cf-WSl" eventType="touchUpInside" id="ph2-1w-xQC"/>
                                                                         <action selector="centerButtonTAPPED:" destination="d6e-kt-N3a" eventType="touchUpInside" id="r9v-3d-qAP"/>
                                                                     </connections>
                                                                 </button>
@@ -483,6 +482,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.65950096270000003" green="0.77297794149999999" blue="0.85477339659999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="centerBtn" destination="BWf-2p-q8Q" id="N8K-Wp-hnL"/>
                                             <outlet property="centerUIView" destination="74G-sb-ITO" id="XsZ-OB-xKl"/>
                                             <outlet property="leftUIView" destination="Wfv-ia-9ZH" id="hXl-Ym-2pB"/>
                                             <outlet property="leftViewMargin" destination="ZRD-LH-9KO" id="EFF-gD-RiY"/>

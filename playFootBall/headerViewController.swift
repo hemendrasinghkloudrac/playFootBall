@@ -23,8 +23,7 @@ class headerViewController: UIViewController {
         DispatchQueue.main.async {
             self.converUIViewToCircle()
         }
-        
-    }
+     }
     //self.perform(#selector(headerViewController.converUIViewToCircle), with: nil, afterDelay: 1)
     
     @IBAction func centerButtonTAPPED(_ sender: AnyObject) {

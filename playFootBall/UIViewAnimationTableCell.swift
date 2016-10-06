@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIViewAnimationTableCell: UITableViewCell {
+class VotingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var leftUIView: UIView!
     @IBOutlet weak var centerUIView: UIView!
@@ -19,10 +19,12 @@ class UIViewAnimationTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        DispatchQueue.main.async {
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.convertPlainUIViewToCircle()
-        }
+        })
     }
+
     
     func convertPlainUIViewToCircle() {
         leftUIView.layer.cornerRadius = leftUIView.frame.size.width/2.0

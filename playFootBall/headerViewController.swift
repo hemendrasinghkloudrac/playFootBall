@@ -18,16 +18,19 @@ class headerViewController: UIViewController {
     @IBOutlet weak var leftViewMargin: NSLayoutConstraint!
     var myConstant = Int()
     var flag = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.converUIViewToCircle()
-        }
+        })
+        
      }
     //self.perform(#selector(headerViewController.converUIViewToCircle), with: nil, afterDelay: 1)
     
-    @IBAction func centerButtonTAPPED(_ sender: AnyObject) {
-        rightHeaderView.isHidden = false
+    @IBAction func centerButtonTAPPED(sender: AnyObject) {
+        rightHeaderView.hidden = false
         if flag {
               myConstant = +60
             flag = false
@@ -37,16 +40,15 @@ class headerViewController: UIViewController {
             flag = true
             
         }
-        self.leftViewMargin.constant = CGFloat(myConstant);
-        self.rightViewMargin.constant = CGFloat(myConstant);
-        
-        UIView.animate(withDuration: 0.4, animations: {
-            self.view.layoutIfNeeded()
+        self.leftViewMargin.constant = CGFloat(myConstant)
+        self.rightViewMargin.constant = CGFloat(myConstant)
+        UIView.animateWithDuration(0.4, animations: {
+        self.view.layoutIfNeeded()
             }, completion: {finished in
                 if self.flag {
-                self.rightHeaderView.isHidden = true
-                }})
-       
+                    self.rightHeaderView.hidden = true
+                }} )
+        
     }
     
     func converUIViewToCircle() {

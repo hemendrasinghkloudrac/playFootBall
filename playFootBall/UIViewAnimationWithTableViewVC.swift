@@ -8,50 +8,40 @@
 
 import UIKit
 
-class UIViewAnimationWithTableViewVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
+class UIViewAnimationWithTableViewVC: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var uiViewAnimationTblView: UITableView!
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "uiViewAnimationCellIdentifier", for: indexPath) as! UIViewAnimationTableCell
-        cell.centerBtn.addTarget(self, action:#selector(UIViewAnimationWithTableViewVC.cellBtnAction), for: .touchUpInside)
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("VotingTableCellID", forIndexPath: indexPath) as! VotingTableViewCell
+        cell.centerBtn.addTarget(self, action: #selector(UIViewAnimationWithTableViewVC.cellBtnAction(_:)), forControlEvents: .TouchUpInside)
         return cell
+
     }
     
-    func cellBtnAction(_ sender: UIButton) {
-        // Method (1) for getting table cell using superview of sender
-        
-       /* let cell = sender.superview?.superview?.superview?.superview as! UIViewAnimationTableCell
-        let  myConstant = -60;
-        cell.rightViewMargin.constant = CGFloat(myConstant)
-        cell.leftViewMargin.constant = CGFloat(myConstant)
-        UIView.animate(withDuration: 0.4, animations: {
-            cell.layoutIfNeeded()
-            }, completion: {finished in })*/
-        
-        
-        // Method(2) for getting table cell using CGPoint
+    func cellBtnAction(sender: UIButton) {
         let  myConstant = -60
-        let point : CGPoint = sender.convert(CGPoint.zero, to:uiViewAnimationTblView)
-        let indexPath = uiViewAnimationTblView.indexPathForRow(at: point)
-        let cell = uiViewAnimationTblView.cellForRow(at: indexPath!) as! UIViewAnimationTableCell
-        cell.rightViewMargin.constant = CGFloat(myConstant)
-        cell.leftViewMargin.constant = CGFloat(myConstant)
-        UIView.animate(withDuration: 0.4, animations: {
-            cell.layoutIfNeeded()
-            }, completion: {finished in })
-    }
+                let point: CGPoint = sender.convertPoint(CGPoint.zero, toView: uiViewAnimationTblView)
+        let indexPath = uiViewAnimationTblView.indexPathForRowAtPoint(point)
+        let cell = uiViewAnimationTblView.cellForRowAtIndexPath(indexPath!) as? VotingTableViewCell
+        
+        cell!.rightViewMargin.constant = CGFloat(myConstant)
+        cell!.leftViewMargin.constant = CGFloat(myConstant)
+        UIView.animateWithDuration(0.4, animations: {
+            cell!.layoutIfNeeded()
+        }, completion: {finished in })
+       }
 }

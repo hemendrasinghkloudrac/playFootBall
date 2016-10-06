@@ -420,7 +420,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RV2-cf-WSl" id="1iV-aY-2Mm">
-                                            <frame key="frameInset" width="320" height="130"/>
+                                            <frame key="frameInset" width="320" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWW-FH-QK2">
@@ -507,12 +507,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="0PP-eO-aZj"/>
                     <connections>
-                        <outlet property="tableView" destination="2nD-EJ-dkd" id="IVb-fw-vuK"/>
+                        <outlet property="uiViewAnimationTblView" destination="2nD-EJ-dkd" id="qOb-2W-9nR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwU-g8-rzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9315" y="39.08450704225352"/>
+            <point key="canvasLocation" x="3998" y="-13"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gk0-tU-Pt3">

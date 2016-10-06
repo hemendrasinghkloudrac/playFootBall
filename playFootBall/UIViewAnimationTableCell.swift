@@ -10,12 +10,17 @@ import UIKit
 
 class VotingTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var lblLeft: UILabel!
+    @IBOutlet weak var lblCenter: UILabel!
+    @IBOutlet weak var lblRight: UILabel!
     @IBOutlet weak var leftUIView: UIView!
     @IBOutlet weak var centerUIView: UIView!
     @IBOutlet weak var rightUIView: UIView!
     @IBOutlet weak var leftViewMargin: NSLayoutConstraint!
     @IBOutlet weak var rightViewMargin: NSLayoutConstraint!
     @IBOutlet weak var centerBtn: UIButton!
+    @IBOutlet weak var leftBtn: UIButton!
+    @IBOutlet weak var rightBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

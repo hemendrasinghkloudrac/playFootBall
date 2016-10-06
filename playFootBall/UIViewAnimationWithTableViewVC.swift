@@ -28,6 +28,8 @@ class UIViewAnimationWithTableViewVC: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("VotingTableCellID", forIndexPath: indexPath) as! VotingTableViewCell
         cell.centerBtn.addTarget(self, action: #selector(UIViewAnimationWithTableViewVC.cellBtnAction(_:)), forControlEvents: .TouchUpInside)
+        cell.leftBtn.addTarget(self, action: #selector(UIViewAnimationWithTableViewVC.cellBtnAction(_:)), forControlEvents: .TouchUpInside)
+        cell.rightBtn.addTarget(self, action: #selector(UIViewAnimationWithTableViewVC.cellBtnAction(_:)), forControlEvents: .TouchUpInside)
         return cell
 
     }

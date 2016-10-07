@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7317E0B01D9E7F3C007A3031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7317E0AF1D9E7F3C007A3031 /* AppDelegate.swift */; };
-		7317E0B21D9E7F3C007A3031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7317E0B11D9E7F3C007A3031 /* ViewController.swift */; };
 		7317E0B51D9E7F3C007A3031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7317E0B31D9E7F3C007A3031 /* Main.storyboard */; };
 		7317E0B71D9E7F3C007A3031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7317E0B61D9E7F3C007A3031 /* Assets.xcassets */; };
 		7317E0BA1D9E7F3C007A3031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7317E0B81D9E7F3C007A3031 /* LaunchScreen.storyboard */; };
 		7317E0C51D9E7F3D007A3031 /* playFootBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7317E0C41D9E7F3D007A3031 /* playFootBallTests.swift */; };
 		7317E0D01D9E7F3D007A3031 /* playFootBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7317E0CF1D9E7F3D007A3031 /* playFootBallUITests.swift */; };
 		7317E0DE1D9E8A08007A3031 /* footBallFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7317E0DD1D9E8A08007A3031 /* footBallFieldVC.swift */; };
+		732160351DA6674C003DFDAC /* footballPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732160341DA6674C003DFDAC /* footballPlayerVC.swift */; };
 		73257FD41DA50D4600FFE163 /* UIViewAnimationWithTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73257FD31DA50D4600FFE163 /* UIViewAnimationWithTableViewVC.swift */; };
 		73257FD61DA50DC800FFE163 /* UIViewAnimationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73257FD51DA50DC800FFE163 /* UIViewAnimationTableCell.swift */; };
+		7337759A1DA78199000E583A /* footBallPlayerTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733775991DA78199000E583A /* footBallPlayerTabelCell.swift */; };
 		73D1A5231DA3C1CD00F90045 /* headerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D1A5221DA3C1CD00F90045 /* headerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +41,6 @@
 /* Begin PBXFileReference section */
 		7317E0AC1D9E7F3C007A3031 /* playFootBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playFootBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7317E0AF1D9E7F3C007A3031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7317E0B11D9E7F3C007A3031 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7317E0B41D9E7F3C007A3031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7317E0B61D9E7F3C007A3031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7317E0B91D9E7F3C007A3031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,8 +52,10 @@
 		7317E0CF1D9E7F3D007A3031 /* playFootBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playFootBallUITests.swift; sourceTree = "<group>"; };
 		7317E0D11D9E7F3D007A3031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7317E0DD1D9E8A08007A3031 /* footBallFieldVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = footBallFieldVC.swift; sourceTree = "<group>"; };
+		732160341DA6674C003DFDAC /* footballPlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = footballPlayerVC.swift; sourceTree = "<group>"; };
 		73257FD31DA50D4600FFE163 /* UIViewAnimationWithTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationWithTableViewVC.swift; sourceTree = "<group>"; };
 		73257FD51DA50DC800FFE163 /* UIViewAnimationTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationTableCell.swift; sourceTree = "<group>"; };
+		733775991DA78199000E583A /* footBallPlayerTabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = footBallPlayerTabelCell.swift; sourceTree = "<group>"; };
 		73D1A5221DA3C1CD00F90045 /* headerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,13 +109,14 @@
 			children = (
 				7317E0AF1D9E7F3C007A3031 /* AppDelegate.swift */,
 				7317E0DD1D9E8A08007A3031 /* footBallFieldVC.swift */,
-				7317E0B11D9E7F3C007A3031 /* ViewController.swift */,
 				73D1A5221DA3C1CD00F90045 /* headerViewController.swift */,
 				73257FD31DA50D4600FFE163 /* UIViewAnimationWithTableViewVC.swift */,
+				732160341DA6674C003DFDAC /* footballPlayerVC.swift */,
 				7317E0B31D9E7F3C007A3031 /* Main.storyboard */,
 				7317E0B61D9E7F3C007A3031 /* Assets.xcassets */,
 				7317E0B81D9E7F3C007A3031 /* LaunchScreen.storyboard */,
 				73257FD51DA50DC800FFE163 /* UIViewAnimationTableCell.swift */,
+				733775991DA78199000E583A /* footBallPlayerTabelCell.swift */,
 				7317E0BB1D9E7F3C007A3031 /* Info.plist */,
 			);
 			path = playFootBall;
@@ -276,8 +279,9 @@
 			files = (
 				7317E0DE1D9E8A08007A3031 /* footBallFieldVC.swift in Sources */,
 				73D1A5231DA3C1CD00F90045 /* headerViewController.swift in Sources */,
+				7337759A1DA78199000E583A /* footBallPlayerTabelCell.swift in Sources */,
+				732160351DA6674C003DFDAC /* footballPlayerVC.swift in Sources */,
 				73257FD61DA50DC800FFE163 /* UIViewAnimationTableCell.swift in Sources */,
-				7317E0B21D9E7F3C007A3031 /* ViewController.swift in Sources */,
 				7317E0B01D9E7F3C007A3031 /* AppDelegate.swift in Sources */,
 				73257FD41DA50D4600FFE163 /* UIViewAnimationWithTableViewVC.swift in Sources */,
 			);

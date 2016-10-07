@@ -34,18 +34,18 @@ class UIViewAnimationWithTableViewVC: UIViewController, UITableViewDelegate,UITa
     func cellBtnAction(_ sender: UIButton) {
         // Method (1) for getting table cell using superview of sender
         
-       /* let cell = sender.superview?.superview?.superview?.superview as! UIViewAnimationTableCell
-        let  myConstant = -60;
-        cell.rightViewMargin.constant = CGFloat(myConstant)
-        cell.leftViewMargin.constant = CGFloat(myConstant)
-        UIView.animate(withDuration: 0.4, animations: {
-            cell.layoutIfNeeded()
-            }, completion: {finished in })*/
+        /* let cell = sender.superview?.superview?.superview?.superview as! UIViewAnimationTableCell
+         let  myConstant = -60;
+         cell.rightViewMargin.constant = CGFloat(myConstant)
+         cell.leftViewMargin.constant = CGFloat(myConstant)
+         UIView.animate(withDuration: 0.4, animations: {
+         cell.layoutIfNeeded()
+         }, completion: {finished in })*/
         
         
         // Method(2) for getting table cell using CGPoint
         let  myConstant = -60
-        let point : CGPoint = sender.convert(CGPoint.zero, to:uiViewAnimationTblView)
+        let point: CGPoint = sender.convert(CGPoint.zero, to:uiViewAnimationTblView)
         let indexPath = uiViewAnimationTblView.indexPathForRow(at: point)
         let cell = uiViewAnimationTblView.cellForRow(at: indexPath!) as! UIViewAnimationTableCell
         cell.rightViewMargin.constant = CGFloat(myConstant)
